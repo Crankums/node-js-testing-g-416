@@ -38,8 +38,8 @@ describe('app', () => {
           .post('user')
           .send({
             email: 'test@email.com',
-            username: 'testUsername',
-            name: 'testName'
+            name: 'testName',
+            username: 'testUsername'
           })
           .set('content-type', 'application/json')
           .expect(200, done)
