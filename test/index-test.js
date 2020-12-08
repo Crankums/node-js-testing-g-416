@@ -11,6 +11,14 @@ describe('app', () => {
       expect(app.up).to.be.an.instanceof(Function)
     })
   })
+
+  describe('/user', function(){
+    describe('POST', function(){
+      it('fails with an empty request body', function(){
+        
+      })
+    })
+  })
 })
 
 let server
