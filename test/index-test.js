@@ -15,7 +15,7 @@ describe('app', () => {
   describe('/user', function(){
     describe('POST', function(){
       it('fails with an empty request body', function(){
-        
+
       })
     })
   })
