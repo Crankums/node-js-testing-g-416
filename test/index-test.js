@@ -35,7 +35,7 @@ describe('app', () => {
 
       it('succeeds with vaild name, username, and email', function(done){
         supertest(server)
-          .post('user')
+          .post('/user')
           .send({
             email: 'test@email.com',
             name: 'testName',
