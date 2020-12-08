@@ -15,10 +15,10 @@ describe('app', () => {
   describe('/user', function(){
     describe('POST', function(){
       it('fails with an empty request body', function(done) {
-  supertest(app).
-    post('/user').
-    expect(400, done)
-})
+        supertest(app).
+          post('/user').
+          expect(400, done)
+      })
     })
   })
 })
