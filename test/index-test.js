@@ -4,6 +4,19 @@ const supertest = require('supertest')
 const app = require('../app')
 
 const expect = chai.expect
+let server
+
+before(function(done){
+  return app.up()
+    .then(_server => {
+      server = _server
+      done()
+    })
+})
+
+after(function(){
+  server.close()
+})
 
 describe('app', () => {
   describe('up', () => {
@@ -35,16 +48,3 @@ describe('app', () => {
   })
 })
 
-let server
-
-before(function(done){
-  return app.up()
-    .then(_server => {
-      server = _server
-      done()
-    })
-})
-
-after(function(){
-  server.close()
-})
