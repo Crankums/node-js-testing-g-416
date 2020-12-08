@@ -20,17 +20,16 @@ describe('app', () => {
           expect(400, done)
       })
 
-      it('succeeds with vaild name, username, and email',
-    function(done){
-      supertest(server)
-        .post('user')
-        .send({
-          email: 'test@email.com',
-          username: 'testUsername',
-          name: 'testName'
-        })
-        .set('content-type', 'application/json')
-        .expect(200, done)
+      it('succeeds with vaild name, username, and email', function(done){
+        supertest(server)
+          .post('user')
+          .send({
+            email: 'test@email.com',
+            username: 'testUsername',
+            name: 'testName'
+          })
+          .set('content-type', 'application/json')
+          .expect(200, done)
       })
     })
   })
